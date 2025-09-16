@@ -421,6 +421,13 @@
     font-size: clamp(2.6rem, 5vw, 3.6rem);
     font-weight: 800;
     letter-spacing: 0.06em;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+
+    &.is-counting {
+      font-family: 'Roboto Mono', 'Fira Mono', monospace;
+      letter-spacing: 0.08em;
+      animation: sk-counter-glimmer 1.1s ease-in-out infinite alternate;
+    }
   }
 
   &__label {
@@ -428,6 +435,18 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.85);
+  }
+}
+
+@keyframes sk-counter-glimmer {
+  0% {
+    transform: translateY(0);
+    opacity: 0.85;
+  }
+
+  100% {
+    transform: translateY(-2px);
+    opacity: 1;
   }
 }
 
