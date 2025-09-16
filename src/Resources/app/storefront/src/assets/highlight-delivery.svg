@@ -1,0 +1,31 @@
+<svg width="640" height="480" viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="640" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F3F8FF"/>
+      <stop offset="1" stop-color="#E2F1FF"/>
+    </linearGradient>
+    <linearGradient id="van" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EDF4FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" rx="40" fill="url(#panel)"/>
+  <g transform="translate(120 140)">
+    <rect x="0" y="64" width="400" height="132" rx="38" fill="#2EA3F2" fill-opacity="0.08"/>
+    <path d="M84 60H250C274 60 294 80 294 104V164H126C102 164 84 146 84 122V60Z" fill="url(#van)" stroke="#D1E3F8" stroke-width="6"/>
+    <path d="M294 104C294 79.1472 314.147 59 339 59H360C383.196 59 402 77.804 402 101V164H294V104Z" fill="#FFFFFF" stroke="#D1E3F8" stroke-width="6"/>
+    <rect x="120" y="96" width="104" height="44" rx="16" fill="#2EA3F2" fill-opacity="0.12"/>
+    <rect x="246" y="98" width="44" height="40" rx="14" fill="#2EA3F2" fill-opacity="0.14"/>
+    <circle cx="150" cy="170" r="28" fill="#FFFFFF" stroke="#2EA3F2" stroke-width="6"/>
+    <circle cx="306" cy="170" r="28" fill="#FFFFFF" stroke="#2EA3F2" stroke-width="6"/>
+    <circle cx="150" cy="170" r="12" fill="#2EA3F2" fill-opacity="0.6"/>
+    <circle cx="306" cy="170" r="12" fill="#2EA3F2" fill-opacity="0.6"/>
+    <path d="M36 140H96" stroke="#BFD6F3" stroke-width="8" stroke-linecap="round"/>
+    <path d="M22 116H76" stroke="#BFD6F3" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(416 86)">
+    <rect x="0" y="0" width="128" height="128" rx="30" fill="#FFFFFF" stroke="#D1E3F8" stroke-width="5"/>
+    <path d="M36 86L62 40L90 86H36Z" fill="#2EA3F2" fill-opacity="0.12" stroke="#2EA3F2" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M78 46C84.6274 46 90 40.6274 90 34C90 27.3726 84.6274 22 78 22C71.3726 22 66 27.3726 66 34C66 40.6274 71.3726 46 78 46Z" fill="#2EA3F2" fill-opacity="0.16"/>
+  </g>
+</svg>

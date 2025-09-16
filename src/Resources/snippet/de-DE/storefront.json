@@ -1,47 +1,79 @@
 {
     "skylad": {
         "topbar": {
-            "text": "🚚 Kostenloser Versand ab 50€"
+            "text": "📍 Reparaturservice in Pirmasens & Umgebung"
         },
         "home": {
             "slider": {
                 "aria": "Folie",
+                "buttonLabel": "Reparatur anfragen",
+                "buttonLink": "https://api.whatsapp.com/send?phone=4917631371638&text=Hallo%20Skylad%20Repair",
                 "slide1": {
-                    "tag": "Express Service",
-                    "title": "Smartphone-Reparaturen binnen 60 Minuten",
-                    "text": "Displays, Akkus und Ladebuchsen tauschen wir direkt in unserer Skylad-Werkstatt – transparent, sicher und mit Originalteilen."
+                    "tag": "Express Reparatur",
+                    "title": "Handy- & Tablet-Reparatur in Pirmasens",
+                    "text": "Displaybruch, Akku oder Ladebuchse – wir beheben Schäden direkt in unserer Werkstatt und liefern dein Gerät funktionstüchtig zurück."
                 },
                 "slide2": {
-                    "tag": "Sorgfältige Diagnose",
-                    "title": "Wir finden jedes versteckte Hardwareproblem",
-                    "text": "Mit modernsten Prüfständen prüfen wir Feuchtigkeitsschäden, Datenleitungen und Mikroelektronik, bevor der Schaden größer wird."
+                    "tag": "Diagnose inklusive",
+                    "title": "Wir finden jeden Hardware-Fehler",
+                    "text": "Feuchtigkeitsschäden, Mikro-Lötarbeiten oder Datensicherung – unser Team prüft alle Komponenten mit Profi-Equipment."
                 },
                 "slide3": {
-                    "tag": "Vor-Ort Beratung",
-                    "title": "Technikhilfe, die zu deinem Alltag passt",
-                    "text": "Ob Business-Geräte oder Familien-Tablets: wir beraten persönlich, holen Geräte ab und liefern sie einsatzbereit zurück."
+                    "tag": "Hol- & Bring-Service",
+                    "title": "Unkompliziert vom Auftrag bis zur Lieferung",
+                    "text": "Wir holen defekte Geräte zuhause ab, reparieren sie schnell und bringen sie anschließend sicher wieder vorbei."
                 }
             },
             "header": {
-                "eyebrow": "Willkommen bei Skylad Repair",
-                "title": "Willkommen bei Skylad – deine Technikwerkstatt in Nürnberg",
-                "text": "Wir retten Lieblingsgeräte, beraten zu Upgrades und halten Unternehmen mit wartungsstarken Servicepaketen in Bewegung.",
-                "whatsAppLabel": "Jetzt via WhatsApp anfragen",
-                "whatsAppLink": "https://wa.me/499112223344"
+                "eyebrow": "Willkommen auf der Website von Reparaturservice Fahrenbruch",
+                "title": "Ihr Smartphone oder Tablet ist kaputt? Dann sind Sie bei uns genau richtig!",
+                "text": "Egal ob Wasserschaden, defekter Akku oder gebrochenes Glas – wir reparieren Handys, Tablets und Notebooks aller bekannten Marken zuverlässig und mit Garantie.",
+                "whatsAppLabel": "jetzt direkt über WhatsApp anfragen",
+                "whatsAppLink": "https://api.whatsapp.com/send?phone=4917631371638&text=Hallo%20Skylad%20Repair"
             },
             "intro": {
-                "title": "Mehr als nur Display-Reparaturen",
-                "text1": "Seit über zehn Jahren kümmern wir uns als Meisterbetrieb um Smartphones, Tablets, Laptops und Wearables aller großen Hersteller.",
-                "text2": "Unser Team aus zertifizierten Techniker:innen arbeitet ESD-geschützt, dokumentiert jeden Schritt digital und hält dich über jeden Status transparent auf dem Laufenden.",
-                "list1": "Apple iPhone, iPad & MacBook Serien",
+                "title": "Fachwerkstatt mit Original-Ersatzteilen",
+                "text1": "Wir setzen ausschließlich geprüfte Bauteile ein und dokumentieren jede Reparatur digital. So behalten Sie den Überblick und erhalten Ihr Gerät schnellstmöglich zurück.",
+                "text2": "Alle Reparaturen werden von geschulten Techniker:innen unter ESD-Schutz durchgeführt – inklusive umfassender Funktionsprüfung.",
+                "list1": "Apple iPhone, iPad & MacBook",
                 "list2": "Samsung Galaxy Smartphones & Tablets",
                 "list3": "HP, Lenovo, Dell & Microsoft Notebooks",
-                "text3": "Vom Glasbruch bis zum Mainboard-Repair – inklusive Ersatzteilbeschaffung, Datenrettung und hauseigenem Geräteleihservice."
+                "text3": "Auf Wunsch holen wir defekte Geräte bei Ihnen ab, retten Daten und stellen bei Bedarf ein Leihgerät bereit."
+            },
+            "highlight1": {
+                "eyebrow": "Reparaturservice",
+                "title": "Schnell & zuverlässig",
+                "text1": "Unser Team arbeitet mit viel Erfahrung und Fingerspitzengefühl. Dadurch tauschen wir Displays, Akkus oder Kameras innerhalb kürzester Zeit aus.",
+                "text2": "Von der Diagnose bis zur Endkontrolle bleiben Sie über jeden Schritt informiert und können Ihre Reparatur bequem online verfolgen.",
+                "list1": "Kostenlose Schadensanalyse vor Auftrag",
+                "list2": "Verwendung hochwertiger Ersatzteile",
+                "list3": "Transparente Preise ohne versteckte Gebühren",
+                "alt": "Illustration eines Smartphones mit Checkliste"
+            },
+            "highlight2": {
+                "eyebrow": "Hol- & Bring-Service",
+                "title": "Einfach & unkompliziert",
+                "text1": "Im Raum Pirmasens holen wir Ihr defektes Gerät ab und liefern es repariert wieder bei Ihnen an – ideal für Unternehmen und private Haushalte.",
+                "text2": "Auf Wunsch übernehmen wir auch die Einrichtung, spielen Updates ein und sichern Ihre Daten vor der Übergabe.",
+                "list1": "Flexible Abholzeiten nach Vereinbarung",
+                "list2": "Versicherter Transport Ihrer Geräte",
+                "list3": "Optionaler Vor-Ort-Einrichtungsservice",
+                "alt": "Illustration eines Lieferwagens mit Paket"
             },
             "counter": {
+                "title": "Unsere Werkstatt in Zahlen",
+                "text": "Seit über zehn Jahren vertrauen Kund:innen auf unseren Reparaturservice – mit hunderten reparierten Geräten und reichlich Koffein im Team.",
                 "smartphone": "SMARTPHONE REPARATUREN",
                 "coffee": "TASSEN KAFFEE",
                 "tablet": "TABLET & LAPTOP REPARATUREN"
+            },
+            "cta": {
+                "title": "Bereit für deine Reparatur?",
+                "text": "Schreib uns direkt via WhatsApp oder ruf an – wir beraten dich persönlich, erstellen ein unverbindliches Angebot und kümmern uns um den Rest.",
+                "buttonLabel": "Jetzt WhatsApp öffnen",
+                "buttonLink": "https://api.whatsapp.com/send?phone=4917631371638&text=Hallo%20Skylad%20Repair",
+                "phoneLabel": "Telefonisch beraten lassen",
+                "phoneNumberPlain": "+4917631371638"
             }
         }
     }
