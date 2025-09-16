@@ -3,6 +3,43 @@
         "topbar": {
             "text": "📍 Reparaturservice in Pirmasens & Umgebung"
         },
+        "header": {
+            "topBar": {
+                "address": "📍 Reparaturservice Fahrenbruch · Winzler Straße 80, 66955 Pirmasens",
+                "whatsAppLabel": "WhatsApp: +49 176 31371638",
+                "whatsAppLink": "https://api.whatsapp.com/send?phone=4917631371638&text=Hallo%20Skylad%20Repair"
+            },
+            "navigation": {
+                "home": {
+                    "label": "Startseite",
+                    "link": "/"
+                },
+                "apple": {
+                    "label": "Apple",
+                    "link": "/apple/"
+                },
+                "samsung": {
+                    "label": "Samsung",
+                    "link": "/samsung/"
+                },
+                "shop": {
+                    "label": "Shop",
+                    "link": "/shop/"
+                },
+                "lexicon": {
+                    "label": "Lexikon",
+                    "link": "/lexikon/"
+                },
+                "contact": {
+                    "label": "Kontakt",
+                    "link": "/kontakt/"
+                }
+            },
+            "cta": {
+                "whatsAppLabel": "Jetzt via WhatsApp schreiben",
+                "whatsAppLink": "https://api.whatsapp.com/send?phone=4917631371638&text=Hallo%20Skylad%20Repair"
+            }
+        },
         "home": {
             "slider": {
                 "aria": "Folie",
