@@ -4,6 +4,7 @@ $brand-primary-dark: theme-color("brandPrimaryDark", #38b26f);
 $brand-dark-grey: theme-color("brandDarkGrey", #1f2933);
 $brand-dark-grey-light: lighten(#1f2933, 18%);
 $btn-radius: to-number(theme-value("buttonRadiusPx", 6));
+$font-family-base: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 
 // Helper: convert string to number (Shopware passes config as string)
 @function to-number($value, $fallback: 0) {
