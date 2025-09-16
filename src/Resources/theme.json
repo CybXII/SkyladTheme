@@ -20,26 +20,35 @@
     "fields": {
       "brandPrimary": {
         "label": {
-          "en-GB": "Primary (Light Green)",
-          "de-DE": "Primärfarbe (Hellgrün)"
+          "en-GB": "Primary (Divi Blue)",
+          "de-DE": "Primärfarbe (Divi-Blau)"
         },
         "type": "color",
         "editable": true,
-        "value": "#51d88a"
+        "value": "#2ea3f2"
       },
       "brandPrimaryDark": {
         "label": {
-          "en-GB": "Primary Dark",
-          "de-DE": "Primär dunkel"
+          "en-GB": "Primary Dark (Hover)",
+          "de-DE": "Primär dunkel (Hover)"
         },
         "type": "color",
         "editable": true,
-        "value": "#38b26f"
+        "value": "#1f7bb8"
       },
       "brandDarkGrey": {
         "label": {
           "en-GB": "Dark Grey",
           "de-DE": "Dunkelgrau"
+        },
+        "type": "color",
+        "editable": true,
+        "value": "#1f2933"
+      },
+      "textColor": {
+        "label": {
+          "en-GB": "Text color",
+          "de-DE": "Textfarbe"
         },
         "type": "color",
         "editable": true,
