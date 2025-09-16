@@ -1,23 +1,5 @@
-@import './variables';
-
-body { font-family: $font-family-base; }
-
-.btn-primary, .btn-buy {
-  background: $sw-color-brand-primary;
-  border-color: $sw-color-brand-primary;
-  border-radius: $border-radius;
-
-  &:hover {
-    background: $sw-color-brand-secondary;
-    border-color: $sw-color-brand-secondary;
-  }
-}
-
-.skylad-topbar {
-  display: block;
-  background: $sw-color-brand-primary;
-  color: #fff;
-  font-size: .875rem;
-  padding: .375rem .75rem;
-  text-align: center;
-}
+// Variables and mixins from the parent Storefront theme are already loaded
+// during compilation, so we only import our theme-specific partials here.
+@import "./variables";
+@import "./buttons";
+@import "./overrides";
