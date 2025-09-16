@@ -25,6 +25,6 @@
     }
   },
   "require": {
-    "shopware/core": ">=6.5.0"
+    "shopware/core": "^6.5"
   }
 }
