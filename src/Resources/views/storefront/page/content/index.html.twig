@@ -8,43 +8,63 @@ If a CMS layout is assigned in Admin, Shopware will render that instead.
 
 {% block base_content %}
 {% if app.request.attributes.get('_route') == 'frontend.home.page' %}
-<section class="sk-hero container">
-<div class="sk-hero__inner">
-<h1 class="sk-hero__title">Willkommen bei <span>Skylad</span></h1>
-<p class="sk-hero__lead">Elegantes Dark‑UI, frisches Hellgrün & performantes Shopping.
-Starte jetzt mit unseren Favoriten.</p>
-<div class="sk-hero__cta">
-<a class="btn btn-primary" href="{{ path('frontend.home.page') }}#features">Jetzt entdecken</a>
-<a class="btn btn-outline" href="{{ path('frontend.search.page') }}">Produkte durchsuchen</a>
-</div>
-</div>
+<section class="sk-hero">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10 col-xl-8">
+                <div class="sk-hero__inner text-center text-md-start">
+                    <h1 class="sk-hero__title">Willkommen bei <span>Skylad</span></h1>
+                    <p class="sk-hero__lead">Elegantes Dark‑UI, frisches Hellgrün & performantes Shopping.
+                        Starte jetzt mit unseren Favoriten.</p>
+                    <div class="sk-hero__cta d-flex flex-column flex-sm-row gap-2">
+                        <a class="btn btn-primary" href="{{ path('frontend.home.page') }}#features">Jetzt entdecken</a>
+                        <a class="btn btn-outline" href="{{ path('frontend.search.page') }}">Produkte durchsuchen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
-<section id="features" class="sk-features container">
-<div class="sk-grid">
-<article class="sk-card">
-<h3>Schnell & intuitiv</h3>
-<p>Optimiertes UI, klare Navigation und schnelle Ladezeiten.</p>
-</article>
-<article class="sk-card">
-<h3>Gradient‑Buttons</h3>
-<p>Buttons mit sanftem Farbverlauf, 6px Radius & dezenter Kontur.</p>
-</article>
-<article class="sk-card">
-<h3>Dark‑Grey Look</h3>
-<p>Abgestufte Grautöne sorgen für moderne, kontrastreiche Optik.</p>
-</article>
-</div>
+<section id="features" class="sk-features">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <article class="sk-card h-100">
+                    <h3>Schnell & intuitiv</h3>
+                    <p>Optimiertes UI, klare Navigation und schnelle Ladezeiten.</p>
+                </article>
+            </div>
+            <div class="col-12 col-md-4">
+                <article class="sk-card h-100">
+                    <h3>Gradient‑Buttons</h3>
+                    <p>Buttons mit sanftem Farbverlauf, 6px Radius & dezenter Kontur.</p>
+                </article>
+            </div>
+            <div class="col-12 col-md-4">
+                <article class="sk-card h-100">
+                    <h3>Dark‑Grey Look</h3>
+                    <p>Abgestufte Grautöne sorgen für moderne, kontrastreiche Optik.</p>
+                </article>
+            </div>
+        </div>
+    </div>
 </section>
 
 
-<section class="sk-cta container">
-<div class="sk-cta__box">
-<h2>Bereit loszulegen?</h2>
-<p>Lege direkt los und entdecke unsere neuesten Produkte.</p>
-<a class="btn btn-primary" href="{{ path('frontend.search.page') }}">Zum Shop</a>
-</div>
+<section class="sk-cta">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="sk-cta__box text-center">
+                    <h2>Bereit loszulegen?</h2>
+                    <p>Lege direkt los und entdecke unsere neuesten Produkte.</p>
+                    <a class="btn btn-primary" href="{{ path('frontend.search.page') }}">Zum Shop</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
