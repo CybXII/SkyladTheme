@@ -32,7 +32,7 @@ button,
 .sw-btn--secondary {
     border-radius: #{$btn-radius}px;
     background: transparent;
-    border: 1px solid lighten($brand-dark-grey, 18%);
+    border: 1px solid $brand-dark-grey-light;
     color: #e5f7ee;
 
     &:hover {
