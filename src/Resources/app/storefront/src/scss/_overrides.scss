@@ -1,0 +1,42 @@
+/*
+Theme-level overrides and helpers
+==================================================
+Adjust global colors, typography and small layout tweaks for the Skylad theme.
+*/
+
+// Global theme colors exposed as CSS variables
+:root {
+    --brand-primary: #{$brand-primary};
+    --brand-primary-dark: #{$brand-primary-dark};
+    --brand-dark-grey: #{$brand-dark-grey};
+}
+
+body {
+    background: $surface-bg;
+    color: #e6f6ee;
+    font-family: $font-family-base;
+}
+
+a {
+    color: $brand-primary;
+
+    &:hover {
+        color: lighten($brand-primary, 6%);
+    }
+}
+
+// Links in dark header/footer
+.header-main,
+.footer-main {
+    background: $brand-dark-grey;
+}
+
+// Topbar banner that can be toggled via CMS block
+.skylad-topbar {
+    display: block;
+    background: $brand-primary;
+    color: #fff;
+    font-size: 0.875rem;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+}
