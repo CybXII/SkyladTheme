@@ -1,47 +1,79 @@
 {
     "skylad": {
         "topbar": {
-            "text": "🚚 Free shipping from 50€"
+            "text": "📍 Repair service in Pirmasens & surrounding area"
         },
         "home": {
             "slider": {
                 "aria": "Slide",
+                "buttonLabel": "Request a repair",
+                "buttonLink": "https://api.whatsapp.com/send?phone=4917631371638&text=Hello%20Skylad%20Repair",
                 "slide1": {
-                    "tag": "Express service",
-                    "title": "Smartphone repairs within 60 minutes",
-                    "text": "We replace displays, batteries and charging ports directly in our Skylad lab – transparent, safe and with genuine parts."
+                    "tag": "Express repair",
+                    "title": "Smartphone & tablet repairs in Pirmasens",
+                    "text": "Broken displays, weak batteries or charging ports – we fix every defect in our workshop and return your device ready to use."
                 },
                 "slide2": {
-                    "tag": "Detailed diagnostics",
-                    "title": "We uncover every hidden hardware issue",
-                    "text": "With state-of-the-art benches we check liquid damage, data lines and micro electronics before the damage escalates."
+                    "tag": "Diagnostics included",
+                    "title": "We uncover every hardware issue",
+                    "text": "Liquid damage, micro soldering or data recovery – our technicians check each component with professional equipment."
                 },
                 "slide3": {
-                    "tag": "In-store consulting",
-                    "title": "Tech support that fits your daily routine",
-                    "text": "From business devices to family tablets: we consult in person, collect your gear and return it ready for use."
+                    "tag": "Pickup & delivery",
+                    "title": "Convenient from order to handover",
+                    "text": "We collect faulty devices at your home, repair them quickly and bring them back safely afterwards."
                 }
             },
             "header": {
-                "eyebrow": "Welcome to Skylad Repair",
-                "title": "Welcome to Skylad – your tech workshop in Nuremberg",
-                "text": "We rescue favourite devices, advise on upgrades and keep companies moving with reliable service packages.",
-                "whatsAppLabel": "Contact us on WhatsApp",
-                "whatsAppLink": "https://wa.me/499112223344"
+                "eyebrow": "Welcome to Reparaturservice Fahrenbruch",
+                "title": "Your phone or tablet stopped working? You are at the right place!",
+                "text": "Whether water damage, broken glass or weak batteries – we repair phones, tablets and notebooks from all major brands reliably and with warranty.",
+                "whatsAppLabel": "contact us on WhatsApp",
+                "whatsAppLink": "https://api.whatsapp.com/send?phone=4917631371638&text=Hello%20Skylad%20Repair"
             },
             "intro": {
-                "title": "More than display repairs",
-                "text1": "For over a decade our certified team has taken care of smartphones, tablets, laptops and wearables from all leading brands.",
-                "text2": "Working in ESD-protected labs we document each step digitally and keep you informed about the current status at all times.",
-                "list1": "Apple iPhone, iPad & MacBook lines",
-                "list2": "Samsung Galaxy phones & tablets",
+                "title": "Certified workshop using genuine spare parts",
+                "text1": "We only use tested components and document every repair digitally. This keeps you informed and guarantees a quick turnaround.",
+                "text2": "All repairs are handled by trained technicians under ESD protection – including extensive function tests.",
+                "list1": "Apple iPhone, iPad & MacBook",
+                "list2": "Samsung Galaxy smartphones & tablets",
                 "list3": "HP, Lenovo, Dell & Microsoft notebooks",
-                "text3": "From cracked glass to board level repairs – including spare part sourcing, data recovery and our in-house device loan service."
+                "text3": "On request we collect devices, secure your data and provide a loan device if needed."
+            },
+            "highlight1": {
+                "eyebrow": "Repair service",
+                "title": "Fast & reliable",
+                "text1": "Thanks to many years of experience we replace displays, batteries or cameras within a very short time.",
+                "text2": "From diagnostics to final check you are informed about each step and can track your repair online.",
+                "list1": "Free damage check before approval",
+                "list2": "High quality spare parts only",
+                "list3": "Transparent pricing without hidden fees",
+                "alt": "Illustration of a smartphone with checklist"
+            },
+            "highlight2": {
+                "eyebrow": "Pickup & delivery",
+                "title": "Simple & convenient",
+                "text1": "Within the Pirmasens area we pick up your device and return it repaired – perfect for households and businesses.",
+                "text2": "We also set up software, install updates and secure your data before handover if required.",
+                "list1": "Flexible pickup appointments",
+                "list2": "Insured transport of your devices",
+                "list3": "Optional on-site setup service",
+                "alt": "Illustration of a delivery van with parcel"
             },
             "counter": {
+                "title": "Our workshop in numbers",
+                "text": "Customers have trusted our repair service for more than ten years – hundreds of fixed devices and quite a lot of coffee keep us going.",
                 "smartphone": "SMARTPHONE REPAIRS",
                 "coffee": "CUPS OF COFFEE",
                 "tablet": "TABLET & LAPTOP REPAIRS"
+            },
+            "cta": {
+                "title": "Ready for your repair?",
+                "text": "Send us a WhatsApp message or give us a call – we provide personal advice, create a non-binding offer and take care of everything else.",
+                "buttonLabel": "Open WhatsApp now",
+                "buttonLink": "https://api.whatsapp.com/send?phone=4917631371638&text=Hello%20Skylad%20Repair",
+                "phoneLabel": "Get advice by phone",
+                "phoneNumberPlain": "+4917631371638"
             }
         }
     }

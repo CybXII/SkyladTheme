@@ -1,0 +1,23 @@
+<svg width="640" height="480" viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="card-bg" x1="0" y1="0" x2="640" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F4F9FF"/>
+      <stop offset="1" stop-color="#E6F2FF"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#ECF3FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" rx="40" fill="url(#card-bg)"/>
+  <rect x="120" y="96" width="400" height="248" rx="28" fill="url(#screen)" stroke="#D3E3F8" stroke-width="6"/>
+  <rect x="162" y="140" width="316" height="72" rx="20" fill="#2EA3F2" fill-opacity="0.1"/>
+  <rect x="162" y="228" width="316" height="44" rx="14" fill="#2EA3F2" fill-opacity="0.12"/>
+  <rect x="162" y="284" width="180" height="36" rx="12" fill="#2EA3F2" fill-opacity="0.16"/>
+  <circle cx="320" cy="370" r="24" fill="#2EA3F2" fill-opacity="0.16"/>
+  <path d="M320 356C311.716 356 305 362.716 305 371C305 379.284 311.716 386 320 386C328.284 386 335 379.284 335 371C335 362.716 328.284 356 320 356ZM316.5 379.5L309.5 372.5L311.914 370.086L316.5 374.672L328.086 363.086L330.5 365.5L316.5 379.5Z" fill="#2EA3F2"/>
+  <g opacity="0.9" transform="translate(420 52)">
+    <rect x="0" y="0" width="120" height="120" rx="26" fill="#FFFFFF" stroke="#D3E3F8" stroke-width="5"/>
+    <path d="M60 28C45.6406 28 34 39.6406 34 54C34 70 60 98 60 98C60 98 86 70 86 54C86 39.6406 74.3594 28 60 28ZM60 66.5C53.6487 66.5 48.5 61.3513 48.5 55C48.5 48.6487 53.6487 43.5 60 43.5C66.3513 43.5 71.5 48.6487 71.5 55C71.5 61.3513 66.3513 66.5 60 66.5Z" fill="#2EA3F2" fill-opacity="0.2"/>
+  </g>
+</svg>

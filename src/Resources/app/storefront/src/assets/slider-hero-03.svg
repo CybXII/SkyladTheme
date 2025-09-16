@@ -1,22 +1,44 @@
 <svg width="1920" height="960" viewBox="0 0 1920 960" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1920" height="960" fill="url(#paint0_linear)"/>
-  <g opacity="0.35">
-    <circle cx="320" cy="640" r="280" fill="url(#paint1_radial)"/>
-    <circle cx="1580" cy="320" r="220" fill="url(#paint2_radial)"/>
-  </g>
-  <path opacity="0.14" d="M0 750C320 620 640 560 960 560C1280 560 1600 620 1920 750V960H0V750Z" fill="#FFFFFF"/>
   <defs>
-    <linearGradient id="paint0_linear" x1="0" y1="0" x2="1920" y2="960" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#081018"/>
-      <stop offset="1" stop-color="#0D2330"/>
+    <linearGradient id="bgGradient03" x1="0" y1="0" x2="1920" y2="920" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F9FCFF"/>
+      <stop offset="1" stop-color="#E4F1FF"/>
     </linearGradient>
-    <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(320 640) rotate(90) scale(280)">
-      <stop stop-color="#62FFD5" stop-opacity="0.5"/>
-      <stop offset="1" stop-color="#62FFD5" stop-opacity="0"/>
+    <radialGradient id="spotC" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(360 640) rotate(90) scale(360)">
+      <stop offset="0" stop-color="#51BAFF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#51BAFF" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="paint2_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1580 320) rotate(90) scale(220)">
-      <stop stop-color="#3BA9FF" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#3BA9FF" stop-opacity="0"/>
+    <radialGradient id="spotD" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(1580 320) rotate(90) scale(320)">
+      <stop offset="0" stop-color="#2EA3F2" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#2EA3F2" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="tablet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EEF4FF"/>
+    </linearGradient>
   </defs>
+  <rect width="1920" height="960" fill="url(#bgGradient03)"/>
+  <circle cx="360" cy="640" r="360" fill="url(#spotC)"/>
+  <circle cx="1560" cy="320" r="320" fill="url(#spotD)"/>
+  <path d="M0 760C340 640 640 600 960 620C1280 640 1620 700 1920 820V960H0V760Z" fill="#D5E6FA" fill-opacity="0.45"/>
+  <g transform="translate(1130 200)">
+    <rect x="0" y="0" width="320" height="440" rx="44" fill="url(#tablet)" stroke="#D2E2F8" stroke-width="8"/>
+    <rect x="54" y="88" width="212" height="240" rx="26" fill="#2EA3F2" fill-opacity="0.12"/>
+    <rect x="120" y="348" width="80" height="20" rx="10" fill="#CDDEF5"/>
+    <circle cx="160" cy="52" r="10" fill="#CDDEF5"/>
+  </g>
+  <g transform="translate(1330 170) rotate(12)">
+    <rect x="0" y="0" width="200" height="360" rx="32" fill="#FFFFFF" stroke="#D2E2F8" stroke-width="6"/>
+    <rect x="38" y="72" width="124" height="200" rx="22" fill="#2EA3F2" fill-opacity="0.14"/>
+    <rect x="74" y="292" width="52" height="28" rx="12" fill="#CDDEF5"/>
+    <circle cx="100" cy="40" r="6" fill="#D5E5FA"/>
+  </g>
+  <g transform="translate(970 320) rotate(-10)">
+    <rect x="0" y="0" width="180" height="320" rx="30" fill="#FFFFFF" stroke="#D2E2F8" stroke-width="6"/>
+    <rect x="36" y="64" width="108" height="184" rx="20" fill="#2EA3F2" fill-opacity="0.12"/>
+    <rect x="62" y="264" width="56" height="32" rx="12" fill="#CDDEF5"/>
+    <circle cx="90" cy="36" r="6" fill="#D5E5FA"/>
+  </g>
 </svg>

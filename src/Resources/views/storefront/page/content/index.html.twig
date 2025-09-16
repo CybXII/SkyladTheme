@@ -1,6 +1,7 @@
 {#
-This overrides the default CMS content page. It renders a custom landing layout
-for the homepage when no Shopping Experience is assigned.
+    Custom homepage layout replicating the Divi-style landing page from the
+    reference site. All texts live in the snippet files so merchants can edit
+    them without touching the template.
 #}
 {% sw_extends '@Storefront/storefront/page/content/index.html.twig' %}
 
@@ -16,6 +17,11 @@ for the homepage when no Shopping Experience is assigned.
                                 <span class="sk-home-slider__tag">{{ 'skylad.home.slider.slide1.tag'|trans }}</span>
                                 <h2>{{ 'skylad.home.slider.slide1.title'|trans }}</h2>
                                 <p>{{ 'skylad.home.slider.slide1.text'|trans }}</p>
+                                <div class="sk-home-slider__actions">
+                                    <a class="btn" href="{{ 'skylad.home.slider.buttonLink'|trans }}">
+                                        {{ 'skylad.home.slider.buttonLabel'|trans }}
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -26,6 +32,11 @@ for the homepage when no Shopping Experience is assigned.
                                 <span class="sk-home-slider__tag">{{ 'skylad.home.slider.slide2.tag'|trans }}</span>
                                 <h2>{{ 'skylad.home.slider.slide2.title'|trans }}</h2>
                                 <p>{{ 'skylad.home.slider.slide2.text'|trans }}</p>
+                                <div class="sk-home-slider__actions">
+                                    <a class="btn" href="{{ 'skylad.home.slider.buttonLink'|trans }}">
+                                        {{ 'skylad.home.slider.buttonLabel'|trans }}
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -36,6 +47,11 @@ for the homepage when no Shopping Experience is assigned.
                                 <span class="sk-home-slider__tag">{{ 'skylad.home.slider.slide3.tag'|trans }}</span>
                                 <h2>{{ 'skylad.home.slider.slide3.title'|trans }}</h2>
                                 <p>{{ 'skylad.home.slider.slide3.text'|trans }}</p>
+                                <div class="sk-home-slider__actions">
+                                    <a class="btn" href="{{ 'skylad.home.slider.buttonLink'|trans }}">
+                                        {{ 'skylad.home.slider.buttonLabel'|trans }}
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -63,35 +79,100 @@ for the homepage when no Shopping Experience is assigned.
 
             <section class="sk-home-intro">
                 <div class="container">
-                    <div class="sk-home-intro__content">
+                    <div class="sk-home-intro__lead">
                         <h2>{{ 'skylad.home.intro.title'|trans }}</h2>
                         <p>{{ 'skylad.home.intro.text1'|trans }}</p>
                         <p>{{ 'skylad.home.intro.text2'|trans }}</p>
-                        <ul class="sk-home-intro__list">
-                            <li>{{ 'skylad.home.intro.list1'|trans }}</li>
-                            <li>{{ 'skylad.home.intro.list2'|trans }}</li>
-                            <li>{{ 'skylad.home.intro.list3'|trans }}</li>
-                        </ul>
-                        <p>{{ 'skylad.home.intro.text3'|trans }}</p>
+                    </div>
+                    <ul class="sk-home-intro__list">
+                        <li>{{ 'skylad.home.intro.list1'|trans }}</li>
+                        <li>{{ 'skylad.home.intro.list2'|trans }}</li>
+                        <li>{{ 'skylad.home.intro.list3'|trans }}</li>
+                    </ul>
+                    <p class="sk-home-intro__note">{{ 'skylad.home.intro.text3'|trans }}</p>
+                </div>
+            </section>
+
+            <section class="sk-home-highlight">
+                <div class="container">
+                    <div class="sk-home-highlight__grid">
+                        <div class="sk-home-highlight__text">
+                            <span class="sk-home-highlight__eyebrow">{{ 'skylad.home.highlight1.eyebrow'|trans }}</span>
+                            <h2>{{ 'skylad.home.highlight1.title'|trans }}</h2>
+                            <p>{{ 'skylad.home.highlight1.text1'|trans }}</p>
+                            <p>{{ 'skylad.home.highlight1.text2'|trans }}</p>
+                            <ul class="sk-home-highlight__list">
+                                <li>{{ 'skylad.home.highlight1.list1'|trans }}</li>
+                                <li>{{ 'skylad.home.highlight1.list2'|trans }}</li>
+                                <li>{{ 'skylad.home.highlight1.list3'|trans }}</li>
+                            </ul>
+                        </div>
+                        <figure class="sk-home-highlight__media">
+                            <img src="{{ asset('bundles/skyladtheme/assets/highlight-service.svg') }}" alt="{{ 'skylad.home.highlight1.alt'|trans }}">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sk-home-highlight sk-home-highlight--reverse">
+                <div class="container">
+                    <div class="sk-home-highlight__grid">
+                        <div class="sk-home-highlight__text">
+                            <span class="sk-home-highlight__eyebrow">{{ 'skylad.home.highlight2.eyebrow'|trans }}</span>
+                            <h2>{{ 'skylad.home.highlight2.title'|trans }}</h2>
+                            <p>{{ 'skylad.home.highlight2.text1'|trans }}</p>
+                            <p>{{ 'skylad.home.highlight2.text2'|trans }}</p>
+                            <ul class="sk-home-highlight__list">
+                                <li>{{ 'skylad.home.highlight2.list1'|trans }}</li>
+                                <li>{{ 'skylad.home.highlight2.list2'|trans }}</li>
+                                <li>{{ 'skylad.home.highlight2.list3'|trans }}</li>
+                            </ul>
+                        </div>
+                        <figure class="sk-home-highlight__media">
+                            <img src="{{ asset('bundles/skyladtheme/assets/highlight-delivery.svg') }}" alt="{{ 'skylad.home.highlight2.alt'|trans }}">
+                        </figure>
                     </div>
                 </div>
             </section>
 
             <section class="sk-home-counter">
                 <div class="container">
+                    <h2>{{ 'skylad.home.counter.title'|trans }}</h2>
+                    <p class="sk-home-counter__intro">{{ 'skylad.home.counter.text'|trans }}</p>
                     <div class="sk-home-counter__grid">
                         <article class="sk-home-counter__item">
-                            <span class="sk-home-counter__value">771</span>
+                            <div class="sk-home-counter__circle">
+                                <span class="sk-home-counter__value">771</span>
+                            </div>
                             <span class="sk-home-counter__label">{{ 'skylad.home.counter.smartphone'|trans }}</span>
                         </article>
                         <article class="sk-home-counter__item">
-                            <span class="sk-home-counter__value">1120</span>
+                            <div class="sk-home-counter__circle">
+                                <span class="sk-home-counter__value">1120</span>
+                            </div>
                             <span class="sk-home-counter__label">{{ 'skylad.home.counter.coffee'|trans }}</span>
                         </article>
                         <article class="sk-home-counter__item">
-                            <span class="sk-home-counter__value">355</span>
+                            <div class="sk-home-counter__circle">
+                                <span class="sk-home-counter__value">355</span>
+                            </div>
                             <span class="sk-home-counter__label">{{ 'skylad.home.counter.tablet'|trans }}</span>
                         </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sk-home-cta">
+                <div class="container">
+                    <h2>{{ 'skylad.home.cta.title'|trans }}</h2>
+                    <p>{{ 'skylad.home.cta.text'|trans }}</p>
+                    <div class="sk-home-cta__actions">
+                        <a class="btn" href="{{ 'skylad.home.cta.buttonLink'|trans }}">
+                            {{ 'skylad.home.cta.buttonLabel'|trans }}
+                        </a>
+                        <a class="btn-outline" href="tel:{{ 'skylad.home.cta.phoneNumberPlain'|trans }}">
+                            {{ 'skylad.home.cta.phoneLabel'|trans }}
+                        </a>
                     </div>
                 </div>
             </section>
