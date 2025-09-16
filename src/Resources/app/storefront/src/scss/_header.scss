@@ -1,0 +1,219 @@
+/*
+Divi-inspired header styling for Skylad Theme
+==================================================
+Sets up the compact top-bar, main navigation row and WhatsApp call-to-action
+button styling. The layout focuses on a balanced horizontal structure on large
+screens and stacks gracefully on smaller devices.
+*/
+
+.skylad-header {
+    background: $surface-bg;
+    color: $text-color;
+    box-shadow: 0 16px 32px rgba($brand-dark-grey, 0.05);
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &__top-bar {
+        background: $brand-dark-grey;
+        color: rgba($brand-primary-contrast, 0.88);
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 0.4rem 0;
+    }
+
+    &__top-bar-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem 1.5rem;
+        text-align: center;
+    }
+
+    &__top-bar-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+
+        &--whatsapp {
+            color: $brand-primary-contrast;
+            font-weight: 600;
+
+            &:hover,
+            &:focus {
+                color: lighten($brand-primary-contrast, 6%);
+            }
+        }
+    }
+
+    &__main {
+        background: $surface-bg;
+        border-bottom: 1px solid rgba($brand-dark-grey, 0.08);
+        padding: 1.25rem 0;
+    }
+
+    &__main-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    &__logo,
+    &__cta {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo-inner {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &__logo-link {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &__logo-picture {
+        display: block;
+        max-height: 64px;
+    }
+
+    &__logo-image {
+        width: auto;
+        max-height: 64px;
+    }
+
+    &__nav {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__nav-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem 1.75rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__nav-link {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        padding: 0.35rem 0;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: $text-color;
+        transition: color 0.2s ease, transform 0.2s ease;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: $brand-primary;
+            border-radius: 999px;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.2s ease;
+        }
+
+        &:hover,
+        &:focus {
+            color: $brand-primary;
+
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba($brand-primary, 0.25);
+            border-radius: 999px;
+            padding-inline: 0.35rem;
+        }
+
+        &.is-active,
+        &[aria-current="page"] {
+            color: $brand-primary;
+
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    &__cta-button {
+        gap: 0.5rem;
+        padding-inline: 1.5rem;
+        font-size: 0.8125rem;
+    }
+
+    &__cta-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 1.125rem;
+            height: 1.125rem;
+        }
+    }
+
+    &__cta-label {
+        letter-spacing: 0.08em;
+    }
+}
+
+@media (max-width: 991px) {
+    .skylad-header {
+        &__main-inner {
+            justify-content: center;
+            text-align: center;
+        }
+
+        &__logo,
+        &__nav,
+        &__cta {
+            width: 100%;
+            justify-content: center;
+        }
+
+        &__cta {
+            margin-top: 1rem;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .skylad-header {
+        &__main {
+            padding: 1rem 0;
+        }
+
+        &__nav-link {
+            letter-spacing: 0.08em;
+        }
+
+        &__cta-button {
+            width: 100%;
+        }
+    }
+}

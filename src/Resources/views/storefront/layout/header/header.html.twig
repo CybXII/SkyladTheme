@@ -1,8 +1,136 @@
 {% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
 
+{% set headerWhatsAppLinkTranslation = 'skylad.header.cta.whatsAppLink'|trans %}
+{% set headerWhatsAppLink = headerWhatsAppLinkTranslation == 'skylad.header.cta.whatsAppLink'
+    ? 'skylad.home.header.whatsAppLink'|trans
+    : headerWhatsAppLinkTranslation %}
+
+{% block layout_header %}
+    {% set topBarAddress = 'skylad.header.topBar.address'|trans %}
+    {% set topBarWhatsAppLabel = 'skylad.header.topBar.whatsAppLabel'|trans %}
+    {% set topBarLinkTranslation = 'skylad.header.topBar.whatsAppLink'|trans %}
+    {% set topBarWhatsAppLink = topBarLinkTranslation == 'skylad.header.topBar.whatsAppLink'
+        ? headerWhatsAppLink
+        : topBarLinkTranslation %}
+    {% set hasTopBarAddress = topBarAddress != 'skylad.header.topBar.address' and topBarAddress|trim is not empty %}
+    {% set hasTopBarWhatsApp = topBarWhatsAppLabel != 'skylad.header.topBar.whatsAppLabel' and topBarWhatsAppLabel|trim is not empty %}
+
+    <header class="skylad-header">
+        {% block layout_header_top_bar %}
+            {% if hasTopBarAddress or hasTopBarWhatsApp %}
+                <div class="skylad-header__top-bar">
+                    <div class="container">
+                        <div class="skylad-header__top-bar-inner">
+                            {% if hasTopBarAddress %}
+                                <span class="skylad-header__top-bar-item skylad-header__top-bar-item--address">
+                                    {{ topBarAddress|sw_sanitize }}
+                                </span>
+                            {% endif %}
+
+                            {% if hasTopBarWhatsApp %}
+                                <a class="skylad-header__top-bar-item skylad-header__top-bar-item--whatsapp"
+                                   href="{{ topBarWhatsAppLink|striptags }}"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                    title="{{ topBarWhatsAppLabel|striptags }}">
+                                    {{ topBarWhatsAppLabel|sw_sanitize }}
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endblock %}
+
+        <div class="skylad-header__main">
+            <div class="container">
+                <div class="skylad-header__main-inner">
+                    {{ block('layout_header_logo') }}
+                    {{ block('layout_header_navigation') }}
+                    {{ block('layout_header_actions') }}
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
 
 {% block layout_header_logo %}
-<div class="header-logo-main">
-{{ parent() }}
-</div>
+    <div class="skylad-header__logo">
+        {{ parent() }}
+    </div>
+{% endblock %}
+
+{% block layout_header_navigation %}
+    {% set navigationConfig = [
+        { key: 'home' },
+        { key: 'apple' },
+        { key: 'samsung' },
+        { key: 'shop' },
+        { key: 'lexicon' },
+        { key: 'contact' }
+    ] %}
+
+    {% set navItems = [] %}
+    {% for config in navigationConfig %}
+        {% set labelKey = 'skylad.header.navigation.' ~ config.key ~ '.label' %}
+        {% set linkKey = 'skylad.header.navigation.' ~ config.key ~ '.link' %}
+        {% set label = labelKey|trans %}
+        {% set linkTranslation = linkKey|trans %}
+        {% set link = linkTranslation != linkKey ? linkTranslation : (config.key == 'home' ? path('frontend.home.page') : '#') %}
+        {% set navItems = navItems|merge([{ label: label, link: link, key: config.key }]) %}
+    {% endfor %}
+
+    {% set currentRoute = app.request is defined ? app.request.attributes.get('_route') : '' %}
+    {% set currentPath = app.request is defined ? app.request.getPathInfo() : '' %}
+
+    {% set navigationAriaTranslation = 'layout.header.navigationMenu'|trans %}
+    {% set navigationAria = navigationAriaTranslation == 'layout.header.navigationMenu'
+        ? 'Main navigation'
+        : navigationAriaTranslation %}
+
+    <nav class="skylad-header__nav" aria-label="{{ navigationAria|striptags }}">
+        <ul class="skylad-header__nav-list">
+            {% for item in navItems %}
+                {% set link = item.link %}
+                {% set hasLeadingSlash = (link|default('')) starts with '/' %}
+                {% set normalizedLink = hasLeadingSlash ? link|trim('/') : '' %}
+                {% set normalizedPath = currentPath ? currentPath|trim('/') : '' %}
+                {% set isActive = false %}
+
+                {% if item.key == 'home' %}
+                    {% set isActive = currentRoute == 'frontend.home.page' %}
+                {% elseif normalizedLink and normalizedPath and normalizedPath starts with normalizedLink %}
+                    {% set isActive = true %}
+                {% endif %}
+
+                <li class="skylad-header__nav-item">
+                    <a class="skylad-header__nav-link{% if isActive %} is-active{% endif %}"
+                       href="{{ link|striptags }}"
+                       {% if isActive %}aria-current="page"{% endif %}
+                       title="{{ item.label|striptags }}">
+                        {{ item.label|sw_sanitize }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block layout_header_actions %}
+    {% set buttonLabelTranslation = 'skylad.header.cta.whatsAppLabel'|trans %}
+    {% set buttonLabel = buttonLabelTranslation == 'skylad.header.cta.whatsAppLabel'
+        ? 'skylad.home.header.whatsAppLabel'|trans
+        : buttonLabelTranslation %}
+    <div class="skylad-header__cta">
+        <a class="skylad-header__cta-button btn"
+           href="{{ headerWhatsAppLink|striptags }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           title="{{ buttonLabel|striptags }}">
+            <span class="skylad-header__cta-icon" aria-hidden="true">
+                {% sw_icon 'whatsapp' %}
+            </span>
+            <span class="skylad-header__cta-label">{{ buttonLabel|sw_sanitize }}</span>
+        </a>
+    </div>
 {% endblock %}

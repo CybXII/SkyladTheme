@@ -35,35 +35,71 @@ a {
 }
 
 // Header + footer styling inspired by Divi
-.header-top {
-    background: $surface-muted;
-    color: $text-color-muted;
-    font-size: 0.8125rem;
-    padding: 0.35rem 0;
-
-    a {
-        color: $brand-primary;
-
-        &:hover,
-        &:focus {
-            color: $brand-primary-dark;
-        }
-    }
-}
-
-.header-main {
+.skylad-header {
     background: $surface-bg;
     color: $text-color;
-    border-bottom: 1px solid rgba($text-color, 0.08);
-    box-shadow: 0 8px 24px rgba($text-color, 0.04);
+    font-family: $font-family-base;
+    box-shadow: 0 16px 32px rgba($brand-dark-grey, 0.05);
 
     a {
         color: inherit;
+        transition: color 0.2s ease, box-shadow 0.2s ease;
 
         &:hover,
         &:focus {
             color: $brand-primary;
         }
+    }
+
+    &__top-bar {
+        background: $brand-dark-grey;
+        color: rgba($brand-primary-contrast, 0.9);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    &__top-bar-item {
+        font-weight: 500;
+        letter-spacing: 0.04em;
+
+        &--whatsapp {
+            font-weight: 600;
+        }
+    }
+
+    &__nav-link {
+        font-family: inherit;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        transition: color 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover,
+        &:focus {
+            color: $brand-primary;
+        }
+
+        &.is-active,
+        &[aria-current='page'] {
+            color: $brand-primary;
+        }
+    }
+
+    &__cta-button {
+        background: linear-gradient(135deg, lighten($brand-primary, 6%), $brand-primary-dark);
+        color: $brand-primary-contrast;
+        border: none;
+        box-shadow: 0 18px 36px rgba($brand-primary, 0.24);
+
+        &:hover,
+        &:focus {
+            background: linear-gradient(135deg, lighten($brand-primary, 12%), $brand-primary);
+            box-shadow: 0 22px 44px rgba($brand-primary, 0.28);
+        }
+    }
+
+    &__cta-icon svg {
+        fill: currentColor;
     }
 }
 
