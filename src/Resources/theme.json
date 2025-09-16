@@ -1,6 +1,7 @@
 {
   "name": "SkyladTheme",
   "author": "CybXII / Alex Luft",
+  "parentTheme": "Storefront",
   "views": [
     "@Storefront",
     "Resources/views"
