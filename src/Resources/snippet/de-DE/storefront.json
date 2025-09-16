@@ -2,6 +2,47 @@
     "skylad": {
         "topbar": {
             "text": "🚚 Kostenloser Versand ab 50€"
+        },
+        "home": {
+            "slider": {
+                "aria": "Folie",
+                "slide1": {
+                    "tag": "Express Service",
+                    "title": "Smartphone-Reparaturen binnen 60 Minuten",
+                    "text": "Displays, Akkus und Ladebuchsen tauschen wir direkt in unserer Skylad-Werkstatt – transparent, sicher und mit Originalteilen."
+                },
+                "slide2": {
+                    "tag": "Sorgfältige Diagnose",
+                    "title": "Wir finden jedes versteckte Hardwareproblem",
+                    "text": "Mit modernsten Prüfständen prüfen wir Feuchtigkeitsschäden, Datenleitungen und Mikroelektronik, bevor der Schaden größer wird."
+                },
+                "slide3": {
+                    "tag": "Vor-Ort Beratung",
+                    "title": "Technikhilfe, die zu deinem Alltag passt",
+                    "text": "Ob Business-Geräte oder Familien-Tablets: wir beraten persönlich, holen Geräte ab und liefern sie einsatzbereit zurück."
+                }
+            },
+            "header": {
+                "eyebrow": "Willkommen bei Skylad Repair",
+                "title": "Willkommen bei Skylad – deine Technikwerkstatt in Nürnberg",
+                "text": "Wir retten Lieblingsgeräte, beraten zu Upgrades und halten Unternehmen mit wartungsstarken Servicepaketen in Bewegung.",
+                "whatsAppLabel": "Jetzt via WhatsApp anfragen",
+                "whatsAppLink": "https://wa.me/499112223344"
+            },
+            "intro": {
+                "title": "Mehr als nur Display-Reparaturen",
+                "text1": "Seit über zehn Jahren kümmern wir uns als Meisterbetrieb um Smartphones, Tablets, Laptops und Wearables aller großen Hersteller.",
+                "text2": "Unser Team aus zertifizierten Techniker:innen arbeitet ESD-geschützt, dokumentiert jeden Schritt digital und hält dich über jeden Status transparent auf dem Laufenden.",
+                "list1": "Apple iPhone, iPad & MacBook Serien",
+                "list2": "Samsung Galaxy Smartphones & Tablets",
+                "list3": "HP, Lenovo, Dell & Microsoft Notebooks",
+                "text3": "Vom Glasbruch bis zum Mainboard-Repair – inklusive Ersatzteilbeschaffung, Datenrettung und hauseigenem Geräteleihservice."
+            },
+            "counter": {
+                "smartphone": "SMARTPHONE REPARATUREN",
+                "coffee": "TASSEN KAFFEE",
+                "tablet": "TABLET & LAPTOP REPARATUREN"
+            }
         }
     }
 }

@@ -1,74 +1,102 @@
 {#
-This overrides the default CMS content page. It renders a clean hero + features + CTA
-when the current route is the homepage and there is no assigned Shopping Experience.
-If a CMS layout is assigned in Admin, Shopware will render that instead.
+This overrides the default CMS content page. It renders a custom landing layout
+for the homepage when no Shopping Experience is assigned.
 #}
 {% sw_extends '@Storefront/storefront/page/content/index.html.twig' %}
 
-
 {% block base_content %}
-{% if app.request.attributes.get('_route') == 'frontend.home.page' %}
-<section class="sk-hero">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10 col-xl-8">
-                <div class="sk-hero__inner text-center text-md-start">
-                    <h1 class="sk-hero__title">Willkommen bei <span>Skylad</span></h1>
-                    <p class="sk-hero__lead">Elegantes Dark‑UI, frisches Hellgrün & performantes Shopping.
-                        Starte jetzt mit unseren Favoriten.</p>
-                    <div class="sk-hero__cta d-flex flex-column flex-sm-row gap-2">
-                        <a class="btn btn-primary" href="{{ path('frontend.home.page') }}#features">Jetzt entdecken</a>
-                        <a class="btn btn-outline" href="{{ path('frontend.search.page') }}">Produkte durchsuchen</a>
+    {% if app.request.attributes.get('_route') == 'frontend.home.page' %}
+        <div class="sk-home">
+            <section class="sk-home-slider" data-skylad-slider data-skylad-slider-interval="7000" data-skylad-slider-a11y="{{ 'skylad.home.slider.aria'|trans }}">
+                <div class="sk-home-slider__inner">
+                    <article class="sk-home-slider__slide is-active" data-skylad-slide style="--sk-slide-bg: url('{{ asset('bundles/skyladtheme/assets/slider-hero-01.svg') }}');">
+                        <div class="sk-home-slider__overlay"></div>
+                        <div class="container sk-home-slider__container">
+                            <div class="sk-home-slider__text">
+                                <span class="sk-home-slider__tag">{{ 'skylad.home.slider.slide1.tag'|trans }}</span>
+                                <h2>{{ 'skylad.home.slider.slide1.title'|trans }}</h2>
+                                <p>{{ 'skylad.home.slider.slide1.text'|trans }}</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="sk-home-slider__slide" data-skylad-slide style="--sk-slide-bg: url('{{ asset('bundles/skyladtheme/assets/slider-hero-02.svg') }}');">
+                        <div class="sk-home-slider__overlay"></div>
+                        <div class="container sk-home-slider__container">
+                            <div class="sk-home-slider__text">
+                                <span class="sk-home-slider__tag">{{ 'skylad.home.slider.slide2.tag'|trans }}</span>
+                                <h2>{{ 'skylad.home.slider.slide2.title'|trans }}</h2>
+                                <p>{{ 'skylad.home.slider.slide2.text'|trans }}</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="sk-home-slider__slide" data-skylad-slide style="--sk-slide-bg: url('{{ asset('bundles/skyladtheme/assets/slider-hero-03.svg') }}');">
+                        <div class="sk-home-slider__overlay"></div>
+                        <div class="container sk-home-slider__container">
+                            <div class="sk-home-slider__text">
+                                <span class="sk-home-slider__tag">{{ 'skylad.home.slider.slide3.tag'|trans }}</span>
+                                <h2>{{ 'skylad.home.slider.slide3.title'|trans }}</h2>
+                                <p>{{ 'skylad.home.slider.slide3.text'|trans }}</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="sk-home-slider__dots" data-skylad-slider-dots></div>
+            </section>
+
+            <section class="sk-home-header">
+                <div class="container">
+                    <div class="sk-home-header__inner">
+                        <div class="sk-home-header__texts">
+                            <span class="sk-home-header__eyebrow">{{ 'skylad.home.header.eyebrow'|trans }}</span>
+                            <h1>{{ 'skylad.home.header.title'|trans }}</h1>
+                            <p>{{ 'skylad.home.header.text'|trans }}</p>
+                        </div>
+                        <div class="sk-home-header__cta">
+                            <a class="sk-home-header__whatsapp" href="{{ 'skylad.home.header.whatsAppLink'|trans }}" target="_blank" rel="noopener">
+                                <img src="{{ asset('bundles/skyladtheme/assets/icon-whatsapp.svg') }}" alt="{{ 'skylad.home.header.whatsAppLabel'|trans }}">
+                                <span>{{ 'skylad.home.header.whatsAppLabel'|trans }}</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
+            </section>
 
-
-<section id="features" class="sk-features">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-12 col-md-4">
-                <article class="sk-card h-100">
-                    <h3>Schnell & intuitiv</h3>
-                    <p>Optimiertes UI, klare Navigation und schnelle Ladezeiten.</p>
-                </article>
-            </div>
-            <div class="col-12 col-md-4">
-                <article class="sk-card h-100">
-                    <h3>Gradient‑Buttons</h3>
-                    <p>Buttons mit sanftem Farbverlauf, 6px Radius & dezenter Kontur.</p>
-                </article>
-            </div>
-            <div class="col-12 col-md-4">
-                <article class="sk-card h-100">
-                    <h3>Dark‑Grey Look</h3>
-                    <p>Abgestufte Grautöne sorgen für moderne, kontrastreiche Optik.</p>
-                </article>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="sk-cta">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-8">
-                <div class="sk-cta__box text-center">
-                    <h2>Bereit loszulegen?</h2>
-                    <p>Lege direkt los und entdecke unsere neuesten Produkte.</p>
-                    <a class="btn btn-primary" href="{{ path('frontend.search.page') }}">Zum Shop</a>
+            <section class="sk-home-intro">
+                <div class="container">
+                    <div class="sk-home-intro__content">
+                        <h2>{{ 'skylad.home.intro.title'|trans }}</h2>
+                        <p>{{ 'skylad.home.intro.text1'|trans }}</p>
+                        <p>{{ 'skylad.home.intro.text2'|trans }}</p>
+                        <ul class="sk-home-intro__list">
+                            <li>{{ 'skylad.home.intro.list1'|trans }}</li>
+                            <li>{{ 'skylad.home.intro.list2'|trans }}</li>
+                            <li>{{ 'skylad.home.intro.list3'|trans }}</li>
+                        </ul>
+                        <p>{{ 'skylad.home.intro.text3'|trans }}</p>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <section class="sk-home-counter">
+                <div class="container">
+                    <div class="sk-home-counter__grid">
+                        <article class="sk-home-counter__item">
+                            <span class="sk-home-counter__value">771</span>
+                            <span class="sk-home-counter__label">{{ 'skylad.home.counter.smartphone'|trans }}</span>
+                        </article>
+                        <article class="sk-home-counter__item">
+                            <span class="sk-home-counter__value">1120</span>
+                            <span class="sk-home-counter__label">{{ 'skylad.home.counter.coffee'|trans }}</span>
+                        </article>
+                        <article class="sk-home-counter__item">
+                            <span class="sk-home-counter__value">355</span>
+                            <span class="sk-home-counter__label">{{ 'skylad.home.counter.tablet'|trans }}</span>
+                        </article>
+                    </div>
+                </div>
+            </section>
         </div>
-    </div>
-</section>
-
-
-{% else %}
-{{ parent() }}
-{% endif %}
+    {% else %}
+        {{ parent() }}
+    {% endif %}
 {% endblock %}

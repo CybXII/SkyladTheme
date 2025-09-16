@@ -2,6 +2,47 @@
     "skylad": {
         "topbar": {
             "text": "🚚 Free shipping from 50€"
+        },
+        "home": {
+            "slider": {
+                "aria": "Slide",
+                "slide1": {
+                    "tag": "Express service",
+                    "title": "Smartphone repairs within 60 minutes",
+                    "text": "We replace displays, batteries and charging ports directly in our Skylad lab – transparent, safe and with genuine parts."
+                },
+                "slide2": {
+                    "tag": "Detailed diagnostics",
+                    "title": "We uncover every hidden hardware issue",
+                    "text": "With state-of-the-art benches we check liquid damage, data lines and micro electronics before the damage escalates."
+                },
+                "slide3": {
+                    "tag": "In-store consulting",
+                    "title": "Tech support that fits your daily routine",
+                    "text": "From business devices to family tablets: we consult in person, collect your gear and return it ready for use."
+                }
+            },
+            "header": {
+                "eyebrow": "Welcome to Skylad Repair",
+                "title": "Welcome to Skylad – your tech workshop in Nuremberg",
+                "text": "We rescue favourite devices, advise on upgrades and keep companies moving with reliable service packages.",
+                "whatsAppLabel": "Contact us on WhatsApp",
+                "whatsAppLink": "https://wa.me/499112223344"
+            },
+            "intro": {
+                "title": "More than display repairs",
+                "text1": "For over a decade our certified team has taken care of smartphones, tablets, laptops and wearables from all leading brands.",
+                "text2": "Working in ESD-protected labs we document each step digitally and keep you informed about the current status at all times.",
+                "list1": "Apple iPhone, iPad & MacBook lines",
+                "list2": "Samsung Galaxy phones & tablets",
+                "list3": "HP, Lenovo, Dell & Microsoft notebooks",
+                "text3": "From cracked glass to board level repairs – including spare part sourcing, data recovery and our in-house device loan service."
+            },
+            "counter": {
+                "smartphone": "SMARTPHONE REPAIRS",
+                "coffee": "CUPS OF COFFEE",
+                "tablet": "TABLET & LAPTOP REPAIRS"
+            }
         }
     }
 }
