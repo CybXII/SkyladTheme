@@ -1,41 +1,91 @@
-// Base button styling with gradient + border + radius
+// Divi-inspired base button styling
 .btn,
 .btn-primary,
 .btn-buy,
 button,
 .sw-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.75rem 1.75rem;
     border-radius: $btn-radius;
-    border: 1px solid rgba(0, 0, 0, 0.18);
-    background-image: linear-gradient(135deg, $brand-primary 0%, $brand-primary-dark 100%);
+    border: 1px solid transparent;
+    background: $brand-primary;
     color: $brand-primary-contrast;
     font-weight: 600;
-    transition: transform 0.06s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 16px 32px rgba($brand-primary, 0.18);
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.12s ease;
 
-    &:hover {
-        filter: brightness(1.02) saturate(1.05);
+    &:hover,
+    &:focus {
+        background: $brand-primary-dark;
+        color: $brand-primary-contrast;
+        box-shadow: 0 20px 36px rgba($brand-primary, 0.22);
         transform: translateY(-1px);
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($brand-primary, 0.35);
     }
 
     &:active {
         transform: translateY(0);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18) inset;
+        box-shadow: 0 8px 18px rgba($brand-primary, 0.18);
+    }
+
+    &:disabled,
+    &.is-disabled {
+        background: lighten($brand-primary, 18%);
+        color: rgba($brand-primary-contrast, 0.65);
+        box-shadow: none;
+        cursor: not-allowed;
+        transform: none;
     }
 
     &.btn--clicked {
-        outline: 2px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 0 0 3px rgba($brand-primary, 0.25);
     }
 }
 
-// Secondary / outline variant for dark grey theme
+// Secondary / outline variant for optional contrast usage
 .btn-outline,
-.sw-btn--secondary {
+.btn-secondary,
+.sw-btn--secondary,
+.btn-outline-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.75rem 1.75rem;
     border-radius: $btn-radius;
     background: transparent;
-    border: 1px solid $brand-dark-grey-light;
-    color: #e5f7ee;
+    border: 2px solid $brand-primary;
+    color: $brand-primary;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.12s ease;
 
-    &:hover {
-        background: rgba(255, 255, 255, 0.04);
+    &:hover,
+    &:focus {
+        background: rgba($brand-primary, 0.08);
+        color: $brand-primary-dark;
+        border-color: $brand-primary-dark;
+        transform: translateY(-1px);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($brand-primary, 0.2);
+    }
+
+    &:active {
+        transform: translateY(0);
+        background: rgba($brand-primary, 0.12);
     }
 }

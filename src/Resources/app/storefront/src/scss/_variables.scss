@@ -1,11 +1,15 @@
 // Theme configuration values from the administration
-$brand-primary: #51d88a;
-$brand-primary-dark: #38b26f;
-$brand-primary-light: #69dd9a; // precomputed 6% lightened #51d88a
+$brand-primary: #2ea3f2;
+$brand-primary-dark: #1f7bb8;
+$brand-primary-light: #5cc3f5; // precomputed 12% lightened #2ea3f2
 $brand-dark-grey: #1f2933;
 $btn-radius: 6px;
-$brand-dark-grey-light: #41566c; // 18% lightened #1f2933
-$font-family-base: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$brand-dark-grey-light: #334155; // softened accent for optional dark sections
+$font-family-base: 'Open Sans', 'Helvetica Neue', Arial, sans-serif !default;
+
+// Base typography colors
+$text-color: #1f2933;
+$text-color-muted: #4b5563;
 
 // Helper: convert string to number (Shopware passes config as string)
 @function to-number($value, $fallback: 0) {
@@ -13,6 +17,12 @@ $font-family-base: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif !defa
 }
 
 // Derived palette
-$brand-primary-contrast: #0f1720; // very dark for contrast on light green backgrounds
-$surface-bg: #0b0f14; // near-black background accents
-$surface-muted: #111827; // dark grey surfaces
+$brand-primary-contrast: #ffffff;
+$surface-bg: #ffffff;
+$surface-muted: #f5f8fb; // pale neutral section background
+$surface-subtle: #eef2f7; // alternative light striping option
+
+// Additional helper colors for dark sections when still required
+$surface-contrast: #0f172a;
+$surface-contrast-muted: #16233a;
+$surface-contrast-text: #f8fafc;
