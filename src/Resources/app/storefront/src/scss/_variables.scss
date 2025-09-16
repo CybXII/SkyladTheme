@@ -1,10 +1,10 @@
 // Theme configuration values from the administration
-$brand-primary: theme-color("brandPrimary", #51d88a);
-$brand-primary-dark: theme-color("brandPrimaryDark", #38b26f);
+$brand-primary: #51d88a;
+$brand-primary-dark: #38b26f;
 $brand-primary-light: #69dd9a; // precomputed 6% lightened #51d88a
-$brand-dark-grey: theme-color("brandDarkGrey", #1f2933);
+$brand-dark-grey: #1f2933;
 $brand-dark-grey-light: lighten(#1f2933, 18%);
-$btn-radius: to-number(theme-value("buttonRadiusPx", 6));
+$btn-radius: 6px;
 $font-family-base: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 
 // Helper: convert string to number (Shopware passes config as string)
