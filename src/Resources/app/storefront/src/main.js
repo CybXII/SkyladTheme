@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     initSkyladHeroSlider();
+    initSkyladCounters();
 });
 
 function initSkyladHeroSlider() {
@@ -97,4 +98,80 @@ function initSkyladHeroSlider() {
         updateSlide(0);
         startAuto();
     });
+}
+
+function initSkyladCounters() {
+    const counters = document.querySelectorAll('.sk-home-counter__value[data-counter-target]');
+
+    if (!counters.length) {
+        return;
+    }
+
+    const parseNumber = (value) => {
+        const parsed = Number.parseInt(value, 10);
+        return Number.isFinite(parsed) ? parsed : null;
+    };
+
+    const animateCounter = (counter) => {
+        const targetValue = parseNumber(counter.dataset.counterTarget);
+
+        if (targetValue === null) {
+            return;
+        }
+
+        if (counter.dataset.counterAnimated === 'true') {
+            return;
+        }
+
+        counter.dataset.counterAnimated = 'true';
+
+        const startValueParsed = parseNumber(counter.dataset.counterStart);
+        const durationParsed = parseNumber(counter.dataset.counterDuration);
+
+        const startValue = startValueParsed !== null ? startValueParsed : 0;
+        const duration = Math.max(durationParsed !== null ? durationParsed : 1500, 0);
+
+        let startTimestamp = null;
+
+        counter.textContent = startValue.toString();
+        counter.classList.add('is-counting');
+
+        const step = (timestamp) => {
+            if (startTimestamp === null) {
+                startTimestamp = timestamp;
+            }
+
+            const progress = duration === 0 ? 1 : Math.min((timestamp - startTimestamp) / duration, 1);
+            const value = Math.floor(startValue + (targetValue - startValue) * progress);
+
+            counter.textContent = value.toString();
+
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            } else {
+                counter.textContent = targetValue.toString();
+                counter.classList.remove('is-counting');
+            }
+        };
+
+        window.requestAnimationFrame(step);
+    };
+
+    if (!('IntersectionObserver' in window)) {
+        counters.forEach((counter) => animateCounter(counter));
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.35,
+    });
+
+    counters.forEach((counter) => observer.observe(counter));
 }
