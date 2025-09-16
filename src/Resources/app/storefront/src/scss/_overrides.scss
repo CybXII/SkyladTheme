@@ -21,7 +21,7 @@ a {
     color: $brand-primary;
 
     &:hover {
-        color: lighten($brand-primary, 6%);
+        color: $brand-primary-light;
     }
 }
 
