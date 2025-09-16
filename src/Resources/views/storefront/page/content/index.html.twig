@@ -1,0 +1,68 @@
+{#
+This overrides the default CMS content page. It renders a clean hero + features + CTA
+when the current route is the homepage and there is no assigned Shopping Experience.
+If a CMS layout is assigned in Admin, Shopware will render that instead.
+#}
+{% sw_extends '@Storefront/storefront/page/content/index.html.twig' %}
+
+
+{% block base_content %}
+{% if app.request.attributes.get('_route') == 'frontend.home.page' %}
+<section class="sk-hero container">
+<div class="sk-hero__inner">
+<h1 class="sk-hero__title">Willkommen bei <span>Skylad</span></h1>
+<p class="sk-hero__lead">Elegantes Dark‑UI, frisches Hellgrün & performantes Shopping.
+Starte jetzt mit unseren Favoriten.</p>
+<div class="sk-hero__cta">
+<a class="btn btn-primary" href="{{ path('frontend.home.page') }}#features">Jetzt entdecken</a>
+<a class="btn btn-outline" href="{{ path('frontend.search.page') }}">Produkte durchsuchen</a>
+</div>
+</div>
+</section>
+
+
+<section id="features" class="sk-features container">
+<div class="sk-grid">
+<article class="sk-card">
+<h3>Schnell & intuitiv</h3>
+<p>Optimiertes UI, klare Navigation und schnelle Ladezeiten.</p>
+</article>
+<article class="sk-card">
+<h3>Gradient‑Buttons</h3>
+<p>Buttons mit sanftem Farbverlauf, 6px Radius & dezenter Kontur.</p>
+</article>
+<article class="sk-card">
+<h3>Dark‑Grey Look</h3>
+<p>Abgestufte Grautöne sorgen für moderne, kontrastreiche Optik.</p>
+</article>
+</div>
+</section>
+
+
+<section class="sk-cta container">
+<div class="sk-cta__box">
+<h2>Bereit loszulegen?</h2>
+<p>Lege direkt los und entdecke unsere neuesten Produkte.</p>
+<a class="btn btn-primary" href="{{ path('frontend.search.page') }}">Zum Shop</a>
+</div>
+</section>
+
+
+<style>
+.container{max-width:1200px;margin:0 auto;padding:2rem;}
+.sk-hero{padding:6rem 0;background:linear-gradient(135deg,var(--brand-dark-grey),#0b1117);border-bottom:1px solid rgba(255,255,255,.06)}
+.sk-hero__title{font-size:3rem;line-height:1.1;margin:0 0 .75rem;font-weight:800}
+.sk-hero__title span{background:linear-gradient(135deg,var(--brand-primary),var(--brand-primary-dark));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sk-hero__lead{opacity:.9;max-width:48ch;margin:0 0 1.5rem}
+.sk-hero__cta .btn{margin-right:.75rem}
+.sk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.sk-card{background:#111827;border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:1.25rem}
+.sk-card h3{margin:.25rem 0 .5rem}
+.sk-cta{padding:3rem 0}
+.sk-cta__box{background:#0f1720;border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:2rem;text-align:center}
+@media (max-width: 980px){.sk-grid{grid-template-columns:1fr}.sk-hero__title{font-size:2.4rem}}
+</style>
+{% else %}
+{{ parent() }}
+{% endif %}
+{% endblock %}

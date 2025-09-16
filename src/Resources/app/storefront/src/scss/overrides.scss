@@ -6,3 +6,33 @@ This file is used to override default SCSS variables from the Shopware Storefron
 Because of the !default flags, theme variable overrides have to be declared beforehand.
 https://getbootstrap.com/docs/5.3/customize/sass/#variable-defaults
 */
+
+
+@import 'variables';
+@import 'buttons';
+@import 'overrides';
+
+
+// Global theme colors
+:root {
+--brand-primary: #{$brand-primary};
+--brand-primary-dark: #{$brand-primary-dark};
+--brand-dark-grey: #{$brand-dark-grey};
+}
+
+
+body {
+background: $surface-bg;
+color: #e6f6ee;
+}
+
+
+a { color: $brand-primary; }
+a:hover { color: lighten($brand-primary, 6%); }
+
+
+// Links in dark header/footer
+.header-main,
+.footer-main {
+background: $brand-dark-grey;
+}

@@ -1,8 +1,9 @@
 {
-  "name": "swag/theme-skeleton",
-  "description": "Theme skeleton plugin",
+  "name": "skylad/theme",
+  "description": "SkyladTheme – light green & dark grey, gradient buttons, custom landing page.",
   "type": "shopware-platform-plugin",
   "license": "MIT",
+  "version": "1.0.0",
   "autoload": {
     "psr-4": {
       "SkyladTheme\\": "src/"
@@ -11,8 +12,19 @@
   "extra": {
     "shopware-plugin-class": "SkyladTheme\\SkyladTheme",
     "label": {
-      "de-DE": "Theme SkyladTheme plugin",
-      "en-GB": "Theme SkyladTheme plugin"
+      "en-GB": "Skylad Theme",
+      "de-DE": "Skylad Theme"
+    },
+    "manufacturerLink": {
+      "en-GB": "https://luft-alex.de",
+      "de-DE": "https://luft-alex.de"
+    },
+    "supportLink": {
+      "en-GB": "https://luft-alex.de",
+      "de-DE": "https://luft-alex.de"
     }
+  },
+  "require": {
+    "shopware/core": ">=6.5.0"
   }
 }

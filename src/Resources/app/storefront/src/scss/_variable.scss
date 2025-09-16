@@ -1,0 +1,17 @@
+// Theme variables
+$brand-primary: theme-color("brandPrimary", #51d88a);
+$brand-primary-dark: theme-color("brandPrimaryDark", #38b26f);
+$brand-dark-grey: theme-color("brandDarkGrey", #1f2933);
+$btn-radius: to-number(theme-value("buttonRadiusPx", 6));
+
+
+// Helper: convert string to number (Shopware passes config as string)
+@function to-number($value, $fallback: 0) {
+@return if(type-of($value) == number, $value, $fallback);
+}
+
+
+// Derived palette
+$brand-primary-contrast: #0f1720; // very dark for contrast on light green backgrounds
+$surface-bg: #0b0f14; // near-black background accents
+$surface-muted: #111827; // dark grey surfaces

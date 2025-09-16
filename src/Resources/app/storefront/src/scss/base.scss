@@ -1,0 +1,23 @@
+@import './variables';
+
+body { font-family: $font-family-base; }
+
+.btn-primary, .btn-buy {
+  background: $sw-color-brand-primary;
+  border-color: $sw-color-brand-primary;
+  border-radius: $border-radius;
+
+  &:hover {
+    background: $sw-color-brand-secondary;
+    border-color: $sw-color-brand-secondary;
+  }
+}
+
+.skylad-topbar {
+  display: block;
+  background: $sw-color-brand-primary;
+  color: #fff;
+  font-size: .875rem;
+  padding: .375rem .75rem;
+  text-align: center;
+}
