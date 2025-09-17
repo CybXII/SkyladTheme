@@ -14,27 +14,32 @@
         : topBarLinkTranslation %}
     {% set hasTopBarAddress = topBarAddress != 'skylad.header.topBar.address' and topBarAddress|trim is not empty %}
     {% set hasTopBarWhatsApp = topBarWhatsAppLabel != 'skylad.header.topBar.whatsAppLabel' and topBarWhatsAppLabel|trim is not empty %}
+    {% set hasTopBar = hasTopBarAddress or hasTopBarWhatsApp %}
 
     <header class="skylad-header">
         {% block layout_header_top_bar %}
-            {% if hasTopBarAddress or hasTopBarWhatsApp %}
+            {% if hasTopBar %}
                 <div class="skylad-header__top-bar">
                     <div class="container">
                         <div class="skylad-header__top-bar-inner">
                             {% if hasTopBarAddress %}
-                                <span class="skylad-header__top-bar-item skylad-header__top-bar-item--address">
-                                    {{ topBarAddress|sw_sanitize }}
-                                </span>
+                                <div class="skylad-header__top-bar-left">
+                                    <span class="skylad-header__top-bar-item skylad-header__top-bar-item--address">
+                                        {{ topBarAddress|sw_sanitize }}
+                                    </span>
+                                </div>
                             {% endif %}
 
                             {% if hasTopBarWhatsApp %}
-                                <a class="skylad-header__top-bar-item skylad-header__top-bar-item--whatsapp"
-                                   href="{{ topBarWhatsAppLink|striptags }}"
-                                   target="_blank"
-                                   rel="noopener noreferrer"
-                                    title="{{ topBarWhatsAppLabel|striptags }}">
-                                    {{ topBarWhatsAppLabel|sw_sanitize }}
-                                </a>
+                                <div class="skylad-header__top-bar-right">
+                                    <a class="skylad-header__top-bar-item skylad-header__top-bar-item--whatsapp"
+                                       href="{{ topBarWhatsAppLink|striptags }}"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       title="{{ topBarWhatsAppLabel|striptags }}">
+                                        {{ topBarWhatsAppLabel|sw_sanitize }}
+                                    </a>
+                                </div>
                             {% endif %}
                         </div>
                     </div>
@@ -122,7 +127,7 @@
         ? 'skylad.home.header.whatsAppLabel'|trans
         : buttonLabelTranslation %}
     <div class="skylad-header__cta">
-        <a class="skylad-header__cta-button btn"
+        <a class="skylad-header__cta-button"
            href="{{ headerWhatsAppLink|striptags }}"
            target="_blank"
            rel="noopener noreferrer"
